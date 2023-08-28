@@ -19,10 +19,10 @@ const div = document.querySelector('div');
 // }
 
 
-const num = +prompt("Enter Number");
+const input = document.querySelector('#number');
+const submit = document.querySelector('#submit');
 
-
-
+// const num = +prompt("Enter Number");
 
 
 // for (let i = 1; i <= 10; i++) {
@@ -42,20 +42,17 @@ const num = +prompt("Enter Number");
 
 
 
+function table() {
+    if (input.value > 0) {
+        for (let i = 1; i <= 10; i++) {
+            div.innerHTML += (`${input.value} * ${i} = ${i * input.value} <br />`);
+        }
 
-if (num > 0) {
-    for (let i = 1; i <= 10; i++) {
-        div.innerHTML += (`${num} * ${i} = ${i * num} <br />`);
+    } else {
+        alert("Invalid Number")
     }
 
-} else {
-    alert("Invalid Number")
 }
-
-
-
-
-
 
 
 
